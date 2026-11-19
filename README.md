@@ -103,15 +103,49 @@ What this repository does not cover is installing the application or repairing a
 
 </div>
 
+## What each guide changes
+
+<div align="center">
+
+| Task | Guide | Outcome |
+| --- | --- | --- |
+| Write the phrase down | [Back Up a DIONE Wallet Seed Phrase](back-up-a-dione-wallet-seed-phrase.md) | The recovery words exist on paper, in order, away from the machine, before the wallet holds anything worth losing. |
+| Restore on another machine | [Restore a DIONE Wallet From a Backup](restore-dione-wallet-from-a-backup.md) | The same keys produce the same receiving addresses, so a second machine reads the same balances without a transfer. |
+| Recover a forgotten password | [Forgot Your DIONE Wallet Password](forgot-dione-wallet-password.md) | The wallet is restored from the phrase into a fresh install rather than unlocked, because the phrase is the recovery path. |
+| Move off ERC-20 | [Migrate DIONE From ERC-20 to Odyssey](migrate-dione-from-erc20-to-odyssey.md) | The old and new addresses are confirmed before the move, and the arrived balance is read on Odyssey Chain afterwards. |
+| Bridge to Odyssey | [Bridge DIONE to Odyssey With Wanchain](bridge-dione-to-odyssey-with-wanchain.md) | The source network, the route and the receiving address are confirmed first, and the arrived balance is checked on the destination chain. |
+
+</div>
+
+
 ## Common first questions
 
-**Where do the keys actually live?** On your machine, encrypted by the local password, or on a hardware device when one is paired. Nothing is held by the project, which is why the phrase is the whole recovery story and why no support channel can restore anything for you.
+### Where do the keys actually live?
 
-**Is the ERC-20 migration still open?** The conversion happened at mainnet launch for eligible balances, without a claim step. The migration page states what was eligible and what to do if the verifier disagrees, and it does not promise a new window.
+On your machine, encrypted by the local password, or on a hardware device when one is paired. Nothing is held by the project, which is why the phrase is the whole recovery story and why no support channel can restore anything for you.
 
-**I bought DIONE on an exchange. Why does the wallet show nothing?** Because the exchange holds the token on the network it names, and a withdrawal has to be sent to an address on the matching network. Check the network on the exchange, then check the address on the explorer before assuming a loss.
+### Is the ERC-20 migration still open?
 
-**Can MetaMask hold DIONE?** Yes, once Odyssey Chain is added with the exact chain ID and RPC. What it cannot do is show validators, delegate a stake or manage the wallet's hardware pairing, which is the comparison page's whole argument.
+The conversion happened at mainnet launch for eligible balances, without a claim step. The migration page states what was eligible and what to do if the verifier disagrees, and it does not promise a new window.
+
+### I bought DIONE on an exchange. Why does the wallet show nothing?
+
+Because the exchange holds the token on the network it names, and a withdrawal has to be sent to an address on the matching network. Check the network on the exchange, then check the address on the explorer before assuming a loss.
+
+### Can MetaMask hold DIONE?
+
+Yes, once Odyssey Chain is added with the exact chain ID and RPC. What it cannot do is show validators, delegate a stake or manage the wallet's hardware pairing, which is the comparison page's whole argument.
+
+### Can the phrase be photographed or stored in a password manager?
+
+It works, and it turns one secret into a secret plus an account, a backup and a device that can be breached without touching your desk. Paper kept offline is the reference; anything connected is a decision to trade safety for convenience.
+
+## Before you install
+
+The application runs on Windows 10 (1909) or later in 64-bit, on macOS 12 or later for either architecture, and on 64-bit Linux such as Ubuntu 20.04 or an equivalent distribution. There is no package repository to add, no node to run beside it and no system library to install first: the platform file on the release page is the whole download.
+
+Confirm three things before the first launch, because each one is cheaper now than later. The file came from the release page above and not from a mirror. The machine meets the row for its platform in the table at the top of this page. The phrase from the first run is written down physically, since the application shows it once and never on request. If any of the three is still open, the guide for that step is in the list above and takes a few minutes.
+
 
 ---
 
